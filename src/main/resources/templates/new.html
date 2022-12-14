@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New User</title>
+</head>
+<body>
+  <div align="center">
+    <h2>New User</h2>
+    <form th:action="@{/add}" th:object="${user}" th:method="POST">
+      <table border="0" cellpadding="5">
+        <tr>
+          <td>
+            <label for="name">Name: </label>
+            <input class="form-control" type="text" id="name" name="Name" th:field="*{name}" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="age">Age: </label>
+            <input class="form-control" type="number" id="age" name="Age" th:field="*{age}" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="submit" value="Save"></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+</html>
